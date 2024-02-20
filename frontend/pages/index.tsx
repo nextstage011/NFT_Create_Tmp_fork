@@ -15,7 +15,7 @@ const Home: NextPage = () => {
     'function totalSupply() public view virtual override returns (uint256)',
     "function mint(uint _mintAmount) public payable",
   ]
-  const contractAddress = "0x9ee6c48d1984fA92dE6c0339741f384E62Ea114a"
+  const contractAddress = "0x16b92F8722A919cd4776ac0F85F62467919EC129"
   useEffect(() => {
     const setSaleInfo = async() =>{
       const provider = await new ethers.providers.Web3Provider((window as any).ethereum);
@@ -59,7 +59,7 @@ const Home: NextPage = () => {
               symbol: 'ETH',
               decimals: 5,
             },
-            rpcUrls: ['https://goerli.infura.io/v3/20cd5bade2c0407da65c6811cc2a1b37'],
+            rpcUrls: ['https://goerli.infura.io/v3/31667292121e4f2bb2dafd56f24fd0a0'],
           }],
         });
         console.log('try');
@@ -72,7 +72,7 @@ const Home: NextPage = () => {
       }
     }
     const mintQuantityPlus = async () =>{
-      if(mintQuantity == 3){
+      if(mintQuantity == 5){
         return;
       } else {
         setmintQuantity(mintQuantity + 1);
@@ -109,9 +109,9 @@ const Home: NextPage = () => {
         <Image className="min-w-full" src="/main_grap.png" alt="Main Image" width={500} height={500}/>
       </div>
       <div className="m-12 lg:m-32 px-12 py-6 lg:pt-8 lg:px-20 border-2 bg-black text-center border-[#FFFFFF] bg-center bg-contain bg-no-repeat">
-        <h1 className="text-2xl lg:text-4xl pt-2 lg:pt-4 lg:pb-6 text-white font-['Impact']">ETH MASKS NFT</h1>
+        <h1 className="text-2xl lg:text-4xl pt-2 lg:pt-4 lg:pb-6 text-white font-['Impact']">ETH MASKS</h1>
         <h1 className="text-2xl lg:text-4xl pt-2 lg:pt-4 lg:pb-6 text-white font-['Impact']"> {mintNum} / 5000</h1>
-        <a className="text-2xl lg:text-4xl pt-2 lg:pt-8 lg:pb-8 text-white font-['Impact']">3</a><a className="text-2xl lg:text-3xl pt-2 lg:pt-8 lg:pb-8 text-[#99CDDB] font-['Impact'] ">MAX</a><br/>
+        <a className="text-2xl lg:text-4xl pt-2 lg:pt-8 lg:pb-8 text-white font-['Impact']">5</a><a className="text-2xl lg:text-3xl pt-2 lg:pt-8 lg:pb-8 text-[#99CDDB] font-['Impact'] ">MAX</a><br/>
         
         <div className="pt-2 lg:pt-6 pb-7">
           <button type="button" className="text-2xl lg:text-3xl inline-flex flex-shrink-0 justify-center items-center gap-2 h-[1.375rem] w-[1.375rem] lg:h-[2.375rem] lg:w-[2.375rem]
